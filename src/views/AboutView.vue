@@ -1,15 +1,22 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+  <n-loading-bar-provider>
+    <n-message-provider>
+      <n-notification-provider>
+        <n-dialog-provider>
+          <demo-view />
+        </n-dialog-provider>
+      </n-notification-provider>
+    </n-message-provider>
+  </n-loading-bar-provider>
+  </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+  <script>
+  import { defineComponent } from "vue";
+  import DemoView from "./DemoView.vue";
+
+  export default defineComponent({
+  components: {
+    DemoView,
+  },
+  });
+  </script>
