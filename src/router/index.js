@@ -21,6 +21,16 @@ const router = createRouter({
       path: '/components',
       name: 'components-demo',
       component: () => import('../views/ComponentsDemoView.vue')
+    },
+    {
+      path: '/component-demo',
+      name: 'component-demo',
+      component: () => import('../views/ComponentDemo.vue')
+    },
+    {
+      path: '/naive-ui-demo-form',
+      name: 'naive-ui-demo-form',
+      component: () => import('../views/NaiveUiDemoForm.vue')
     }
 
   ]
