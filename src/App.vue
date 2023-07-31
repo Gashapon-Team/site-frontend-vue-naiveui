@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'  
+import HelloWorld from './components/HelloWorld.vue'
 
 /**
  * Customizing theme
@@ -25,27 +25,32 @@ const themeOverrides = {
   },
   Select: {
     peers: {
-      InternalSelection: { 
+      InternalSelection: {
         textColor: primaryColor
       }
     }
   },
   Input: {
     peers: {
-      InternalSelection: { 
+      InternalSelection: {
         textColor: primaryColor
       }
     }
-  },
+  }
 }
-
 </script>
 
 <template>
   <header>
     <div class="wrapper">
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="100" height="100" />
-      <img alt="Naive UI logo" class="logo" src="@/assets/naiveUi_logo.png" width="125" height="125" />
+      <img
+        alt="Naive UI logo"
+        class="logo"
+        src="@/assets/naiveUi_logo.png"
+        width="125"
+        height="125"
+      />
       <HelloWorld msg="Vue 3 & Naive UI DEMO" />
 
       <nav>
@@ -68,7 +73,6 @@ const themeOverrides = {
       </n-message-provider>
     </n-loading-bar-provider>
   </n-config-provider>
-
 </template>
 
 <style scoped>

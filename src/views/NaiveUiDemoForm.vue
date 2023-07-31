@@ -51,7 +51,11 @@
         />
       </n-form-item>
       <n-form-item label="日期區間" path="daterangeValue">
-        <Daterange v-model:value="model.daterangeValue" @returnDaterange="setDaterange($event)" :reset-trigger="resetFlag"/>
+        <Daterange
+          v-model:value="model.daterangeValue"
+          @returnDaterange="setDaterange($event)"
+          :reset-trigger="resetFlag"
+        />
       </n-form-item>
       <n-form-item label="時間" path="timePickerValue">
         <n-time-picker v-model:value="model.timePickerValue" placeholder="請選擇時間" />
@@ -129,7 +133,7 @@ import Daterange from '../components/Daterange.vue'
 
 const formRef = ref(null)
 const message = useMessage()
-let resetFlag = ref(false)
+let resetFlag = ref(false) //daterange
 
 function initModel() {
   return {
@@ -138,7 +142,10 @@ function initModel() {
     selectValue: null,
     multipleSelectValue: null,
     datetimeValue: null,
-    daterangeValue: [ new Date(new Date().setMonth(new Date().getMonth() - 3)).toISOString().substr(0, 10), new Date().toISOString().substr(0, 10) ], //init last 3 month
+    daterangeValue: [
+      new Date(new Date().setMonth(new Date().getMonth() - 3)).toISOString().substr(0, 10),
+      new Date().toISOString().substr(0, 10)
+    ], //init last 3 month
     timePickerValue: null,
     nestedValue: {
       path1: null,
@@ -156,20 +163,20 @@ function initModel() {
 let model = reactive(initModel())
 
 const setDaterange = (value) => {
-    console.log('setDaterange value',value)
+  console.log('setDaterange value', value)
   model.daterangeValue = value
 }
 
 const reset = async () => {
-  resetFlag.value = true //daterange 
+  resetFlag.value = true //daterange
   formRef.value?.restoreValidation()
   Object.assign(model, initModel()) // deep copy
 
   await nextTick() //nextTick() 在DOM(子组件)更新完成後延遲執行後續程式。
-  resetFlag.value = false 
-//   setTimeout(() => {
-//     resetFlag.value = false
-//   }, 0)
+  resetFlag.value = false
+  //   setTimeout(() => {
+  //     resetFlag.value = false
+  //   }, 0)
 
   console.log('reset', model)
 }

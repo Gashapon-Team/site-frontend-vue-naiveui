@@ -32,7 +32,6 @@ const router = createRouter({
       name: 'naive-ui-demo-form',
       component: () => import('../views/NaiveUiDemoForm.vue')
     }
-
   ]
 })
 
