@@ -36,6 +36,12 @@ const router = createRouter({
       name: 'naive-ui-demo-form',
       component: () => import('../views/NaiveUiDemoForm.vue'),
       meta: { showHeader: true },
+    },
+    {
+      path: '/newebpay',
+      name: 'newebpay',
+      component: () => import('../views/Newebpay.vue'),
+      meta: { showHeader: false },
     }
   ]
 })

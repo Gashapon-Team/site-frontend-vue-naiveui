@@ -18,9 +18,6 @@ const showHeader = computed(() => {
  * @type import('naive-ui').GlobalThemeOverrides
  */
 
-// Menu bg
-// background: linear-gradient(205deg, #3B82F6 -36.4%, #397EF2 -31.69%, #377AED -26.99%, #3676E9 -22.29%, #3472E4 -17.58%, #326DE0 -12.88%, #3069DB -8.18%, #2E65D7 -3.48%, #2D61D3 1.23%, #2B5DCE 5.93%, #2959CA 10.63%, #2755C5 15.34%, #2551C1 20.04%, #234CBC 24.74%, #2248B8 29.45%, #2044B3 34.15%, #1E40AF 38.85%);
-
 const primaryColor = '#3755BB'
 
 const themeOverrides = {
@@ -46,6 +43,30 @@ const themeOverrides = {
         textColor: primaryColor
       }
     }
+  },
+  Menu: {
+    groupTextColor: '#FFF',
+    itemIconColor: '#FFF',
+    itemIconColorHover: '#FFF',
+    itemIconColorChildActive: '#FFF',
+    itemIconColorChildActiveHover: '#FFF',
+
+    itemTextColor: '#FFF',
+    itemTextColorHover: '#FFF',
+    itemTextColorActive: '#FFF',
+    itemTextColorActiveHover: '#FFF',
+    itemTextColorChildActive: '#FFF',
+    itemTextColorChildActiveHover: '#FFF',
+
+    itemColorHover: '#002DC67A',
+    itemColorActiveHover: '#002DC67A',
+    itemColorActive: '#FFFFFF1A',
+
+    arrowColor: '#FFF',
+    arrowColorHover: '#FFF',
+    arrowColorChildActive: '#FFF',
+    arrowColorChildActiveHover: '#FFF',
+
   }
 }
 </script>
