@@ -4,7 +4,7 @@
     <p style="font-size:12px; padding-left:32px; color:#fff;">
       會員平台管理
     </p>
-    <n-menu :options="menuOptions" :default-expanded-keys="defaultExpandedKeys" accordion/>
+    <n-menu :options="menuOptions" accordion/>
   </div>
 </template>
   
@@ -133,13 +133,12 @@ const menuOptions = [
   }
 ]
 
-const defaultExpandedKeys = ['fish', 'braise']
-
 </script>
 
 <style scoped>
 .accordionMenu {
   width:272px;
+  height: 100%;
   padding-bottom: 15px;
   background: linear-gradient(205deg, #3B82F6 -36.4%, #397EF2 -31.69%, #377AED -26.99%, #3676E9 -22.29%, #3472E4 -17.58%, #326DE0 -12.88%, #3069DB -8.18%, #2E65D7 -3.48%, #2D61D3 1.23%, #2B5DCE 5.93%, #2959CA 10.63%, #2755C5 15.34%, #2551C1 20.04%, #234CBC 24.74%, #2248B8 29.45%, #2044B3 34.15%, #1E40AF 38.85%);
 }
