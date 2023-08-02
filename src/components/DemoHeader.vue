@@ -79,6 +79,8 @@ nav a:first-of-type {
     align-items: center;
     /* place-items: flex-start; */
     flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
   }
 
   nav {
@@ -88,6 +90,9 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

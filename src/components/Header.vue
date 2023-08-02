@@ -3,7 +3,7 @@
         <n-space justify="end">
             <span style="font-variant-numeric: tabular-nums">
                 <n-countdown ref="countdown" :duration="10*60000" />
-                秒自動登出
+                後自動登出
             </span>
             <n-icon :color="primaryColor" size="24"><NotificationsNoneOutlined /></n-icon>
             <n-icon :color="primaryColor" size="24"><HelpOutlineSharp /></n-icon>
@@ -37,6 +37,7 @@ const primaryColor = "#3755BB"
     width: 100%;
     height: 50px;
     padding: 10px 40px;
+    background-color: #FFF;
     box-shadow: 0px 1px 2px 0px #0000000D;
 }
 </style>

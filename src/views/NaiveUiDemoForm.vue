@@ -10,7 +10,7 @@
       label-width="auto"
       :style="{
         maxWidth: '640px',
-        margin: '50px 0px'
+        margin: '50px auto'
       }"
     >
       <n-h2>建立商店</n-h2>

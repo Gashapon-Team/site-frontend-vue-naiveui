@@ -1,6 +1,4 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
 import { computed } from 'vue'
 import { useRoute, RouterView } from 'vue-router'
 import DemoHeader from './components/DemoHeader.vue'
@@ -66,7 +64,6 @@ const themeOverrides = {
     arrowColorHover: '#FFF',
     arrowColorChildActive: '#FFF',
     arrowColorChildActiveHover: '#FFF',
-
   }
 }
 </script>
