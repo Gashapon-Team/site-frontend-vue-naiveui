@@ -1,57 +1,28 @@
-# site-frontend-vue-naiveui
+# icon 分散在各資料夾中, 如需要大量使用不同的圖示 就需要 import 各自的 
+EX: Header 3 個 icon 分別 再不同位置 .(不確定有沒有比較偷懶的解法)
+import { Bell } from "@vicons/tabler";
+import { ArrowDropDownRound } from "@vicons/material";
+import { QuestionCircle24Regular } from "@vicons/fluent";
 
-This template should help get you started developing with Vue 3 in Vite.
+# button 用圖示當作按鈕效果
+用 text 可以達成 , 但如果需點擊時有其他效果好像無法達成
 
-## Recommended IDE Setup
+# CSS 控制
+需要調整css時,可能會不好操控
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+EX: Siderbar 有用router 跟沒用
+ .n-icon{
+        color:white;
+    }
+    .n-menu .n-menu-item-content .n-menu-item-content-header a{
+        color:white;
+    }
+    .n-menu .n-menu-item-content .n-menu-item-content-header{
+        color:white;
+    }
+    .n-menu .n-menu-item-content .n-menu-item-content__arrow{
+        color:white;
+    }
+    #app > div > div:nth-child(2) > div.n-space.menu_css > div:nth-child(3){
+        width:100%
+    }
