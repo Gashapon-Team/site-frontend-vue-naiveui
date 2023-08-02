@@ -1,6 +1,8 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import SideBar from './components/SideBar.vue'
 </script>
 
 <template>
@@ -16,8 +18,18 @@
       </nav>
     </div>
   </header> -->
+  <div>
+    <Header/>
+    <div style="display:flex;">
+      <SideBar style="width:25%"/>
+      <div style="width:75%;border:1px solid green;">
+        123 
+      </div>
+    </div>
+  </div>
+  
+  
 
-  <RouterView />
 </template>
 
 <style scoped>
